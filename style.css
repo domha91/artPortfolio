@@ -9,13 +9,13 @@
 
 body {
   background: #eee;
-  color: #535353;
+  color: #728585;
   font-family: "Raleway", sans-serif;
   line-height: 1.45;
 }
 
 .navbar {
-  background: #2b2b2b;
+  background: #e0dede;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -91,7 +91,7 @@ body {
 }
 
 .nav-item.active {
-  color: #535353;
+  color: #728585;
 }
 
 .container {
