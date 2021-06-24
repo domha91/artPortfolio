@@ -1,0 +1,280 @@
+// Import Google Font - Raleway 300 & 700
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+
+// ===================
+// Font and color variables
+// ===================
+
+// Fonts
+$sans-serif: 'Raleway', sans-serif;
+$font-light: 300;
+$font-bold: 700;
+
+// Colors
+$white: #eee;
+$gray: #4f4f4f;
+$medium-gray: #737373;
+$light-gray: #c4c4c4;
+$skyBlue: #bae5fdfb;
+
+// Semantic color names
+$accent: $skyBlue;
+
+$body-background: $white;
+$menu-background: $gray;
+
+$main-font-color: $light-gray;
+$menu-active-color: $light-gray;
+$menu-font-color: $medium-gray;
+$link-color: $accent;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+  background: $body-background;
+  color: $main-font-color;
+  font-family: $sans-serif;
+//   font-size: 1.2rem;
+  line-height: 1.45;
+
+}
+
+.navbar {
+  background: $menu-background;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 102;
+
+}
+
+.logo {
+  float: left;
+  margin-top: 1.4rem;
+  margin-left: 2rem;
+  margin-right: 3rem;
+  display: block;
+  text-transform: uppercase;
+  span {
+    font-weight: $font-bold;
+  }
+
+  @media screen and (max-width: 900px) {
+      margin-top: 0.8rem;
+      margin-right: 2rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+  }
+}
+
+.nav-item {
+  float: left;
+  display: block;
+  color: $menu-font-color;
+  text-align: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.7rem;
+
+  @media  screen and (max-width: 900px) {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  @media  screen and (max-width: 600px) {
+      font-size: 1.2rem;
+      padding: 0.4rem 0.4rem;
+  }
+
+  
+  z-index: 102;
+  
+  &.active {
+    color: $menu-active-color;
+  }
+
+}
+
+.container{
+    width: 100%;
+    max-width: 120rem;
+    margin-top: 35px;
+    // margin: auto;
+    padding: 0 1.5rem;
+}
+
+.image-gallery{
+    display: grid;
+    grid-template-columns: repeat(1fr, 4);
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas: 
+        'img-1 img-2 img-3 img-3' 
+        'img-1 img-4 img-5 img-6'
+        'img-7 img-7 img-8 img-6'; 
+}
+
+.image-gallery a{
+    width: 100%;
+    height: 25rem;
+    color: #000;
+    font-weight: $font-bold;
+    font-size: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all ease-in-out 300ms;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index:101;
+}
+/* Icon */
+.image-gallery a i{
+    color: rgba(255,255,255, .6); 
+    margin: 1rem;
+    font-size: 3rem;
+    position: relative;
+    z-index: 100;
+    padding: 1rem 3rem;
+    border: 2px solid rgba(255,255,255,.6);
+    border-radius: .4rem;
+    opacity: 0; 
+    transition: opacity 0.5s;
+}
+
+.image-gallery a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    opacity: 0;
+    transition: opacity .5s;
+}
+.image-gallery a:hover,
+.image-gallery a:hover i,
+.image-gallery a:hover::before{
+    opacity: 1;
+}
+
+.img-1{
+    
+    background-image: url("img/boat.jpg");
+}
+
+[class*=“img“] {
+    /* base properties */
+    &::before {
+        content: '';
+        display: block;
+        background: $white;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: all ease-in-out 300ms;
+        z-index: -1;
+      }
+      
+      &:hover::before {
+        opacity: 0.2;
+      }
+  }
+  .img-1{
+    grid-area: img-1;
+    min-height: 51.5rem;
+    background-image: url("/img/boat.jpg");
+  }
+  .img-2{
+    grid-area: img-2;
+    background-image: url("/img/flowers.jpg");
+  }
+  .img-3{
+    grid-area: img-3;
+    background-image: url("/img/westie.jpg");
+  }
+  .img-4{
+    grid-area: img-4;
+    background-image: url("/img/panda.jpg");
+  }
+  .img-5{
+    grid-area: img-5;
+    background-image: url("/img/forest.jpg");
+  }
+  .img-6{
+    grid-area: img-6;
+    min-height: 51.5rem;
+    background-image: url("/img/headshot.jpg");
+  }
+  .img-7{
+    grid-area: img-7;
+    background-image: url("/img/girl.jpg");
+  }
+  .img-8{
+    grid-area: img-8;
+    background-image: url("/img/house.jpg");
+    
+}
+
+@media screen and (max-width: 900px) {
+    .image-gallery{
+        grid-template-areas: 
+        'img-1 img-1 img-2 img-2' 
+        'img-1 img-1 img-3 img-3'
+        'img-4 img-4 img-5 img-5'
+        'img-6 img-7 img-7 img-7'
+        'img-8 img-8 img-8 img-8'; 
+    }
+
+    .image-gallery a{
+        height: 20rem;
+    }
+
+    .img-1{
+        min-height: 41.5rem;
+    }
+
+    .img-6{
+        min-height: 20rem;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .image-gallery{
+        grid-template-areas: 
+        'img-1 img-1 img-1 img-1' 
+        'img-2 img-2 img-2 img-2'
+        'img-3 img-3 img-3 img-3'
+        'img-4 img-4 img-4 img-4'
+        'img-5 img-5 img-5 img-5'
+        'img-6 img-6 img-6 img-6'
+        'img-7 img-7 img-7 img-7'
+        'img-8 img-8 img-8 img-8'; 
+    }
+
+    .image-gallery a,
+    .img-1
+    .img-6{
+        min-height: 30rem;
+        height: 30rem;
+    }
+    
+}
