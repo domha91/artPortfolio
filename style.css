@@ -189,14 +189,14 @@ body {
   -ms-grid-column: 1;
   grid-area: img-1;
   min-height: 51.5rem;
-  background-image: url("img/boat.jpg");
+  background-image: url("./img/boat.jpg");
 }
 
 .img-2 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: img-2;
-  background-image: url("img/flowers.jpg");
+  background-image: url("./img/flowers.jpg");
 }
 
 .img-3 {
@@ -204,21 +204,21 @@ body {
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-area: img-3;
-  background-image: url("img/westie.jpg");
+  background-image: url("./img/westie.jpg");
 }
 
 .img-4 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: img-4;
-  background-image: url("img/panda.jpg");
+  background-image: url("./img/panda.jpg");
 }
 
 .img-5 {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: img-5;
-  background-image: url("img/forest.jpg");
+  background-image: url("./img/forest.jpg");
 }
 
 .img-6 {
@@ -227,7 +227,7 @@ body {
   -ms-grid-column: 4;
   grid-area: img-6;
   min-height: 51.5rem;
-  background-image: url("img/headshot.jpg");
+  background-image: url("./img/headshot.jpg");
 }
 
 .img-7 {
@@ -235,14 +235,14 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: img-7;
-  background-image: url("img/girl.jpg");
+  background-image: url("./img/girl.jpg");
 }
 
 .img-8 {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
   grid-area: img-8;
-  background-image: url("img/house.jpg");
+  background-image: url("./img/house.jpg");
 }
 
 @media screen and (max-width: 900px) {
