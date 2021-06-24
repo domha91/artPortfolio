@@ -171,6 +171,18 @@ body {
   opacity: 1;
 }
 
+.image-gallery a:focus,
+.image-gallery a:focus i,
+.image-gallery a:focus::before {
+  opacity: 1;
+}
+
+.image-gallery a:active,
+.image-gallery a:active i,
+.image-gallery a:active::before {
+  opacity: 1;
+}
+
 [class*=“img“] {
   /* base properties */
 }
