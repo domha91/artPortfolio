@@ -134,6 +134,8 @@ body {
         'img-7 img-7 img-8 img-6'; 
 }
 
+// TODO: Add a short description and title to each 
+// image gallery element when hovered over
 .image-gallery a{
     width: 100%;
     height: 25rem;
@@ -176,22 +178,15 @@ body {
     opacity: 0;
     transition: opacity .5s;
 }
+
+//TODO: Figure out a way to get this behaviour
+// on mobile and tablet
 .image-gallery a:hover,
 .image-gallery a:hover i,
 .image-gallery a:hover::before{
     opacity: 1;
 }
-.image-gallery a:focus,
-.image-gallery a:focus i,
-.image-gallery a:focus::before{
-    opacity: 1;
-}
 
-.image-gallery a:active,
-.image-gallery a:active i,
-.image-gallery a:active::before{
-    opacity: 1;
-}
 
 
 [class*=“img“] {
