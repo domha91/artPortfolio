@@ -50,6 +50,14 @@ body {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .logo {
+    margin-left: 0.5rem;
+    margin-top: 0.4rem;
+    margin-right: 6rem;
+  }
+}
+
 .nav-item {
   float: left;
   display: block;
@@ -75,13 +83,20 @@ body {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .nav-item {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.4rem;
+  }
+}
+
 .nav-item.active {
   color: #c4c4c4;
 }
 
 .container {
   width: 100%;
-  max-width: 120rem;
+  max-width: 170rem;
   margin-top: 35px;
   padding: 0 1.5rem;
 }
@@ -154,10 +169,6 @@ body {
 .image-gallery a:hover i,
 .image-gallery a:hover::before {
   opacity: 1;
-}
-
-.img-1 {
-  background-image: url("img/boat.jpg");
 }
 
 [class*=“img“] {
